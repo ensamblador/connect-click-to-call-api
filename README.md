@@ -41,7 +41,7 @@ $ pip install -r requirements.txt
 At this point you can now synthesize the CloudFormation template for this code.
 
 ```
-$ cdk synth
+cdk synth
 ```
 
 To add additional dependencies, for example other CDK libraries, just add
@@ -69,6 +69,34 @@ _**IID**_: Instance ID que se obtiene desde la consola de administración de con
 
 _**SFN**_: Número de teléfono asignado a connect (uno de ellos) 
 
+
+## Test API
+
+Una vez desplegado en los outputs se recibe la URL de la API
+
+```bash
+ConnectClickToCallApiStack: deploying...
+
+ ✅  ConnectClickToCallApiStack 
+
+Outputs:
+API = https://api_url
+```
+
+Esta API es la base para ejecutar el click to call
+
+`https://api_url/call_customer?nombre=<nombre>&telefono=<telefono>`
+
+Donde:
+**nombre**: Nombre del cliente codificado URL (ejemplo "Enrique")
+**telefono**: Telefono del cliente en formato E.164 y codificado URL (ejemplo +56912345678 => %2B56912345678)
+
+
+## Eliminar la aplicación
+
+```bash
+cdk destroy
+```
 
 ## Useful commands
 
