@@ -1,0 +1,65 @@
+{
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook",
+    "userId": "whatsapp56974769647",
+    "sessionAttributes": null,
+    "requestAttributes": null,
+    "bot": {
+        "name": "multichannel_lex_bot",
+        "alias": "$LATEST",
+        "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+        "name": "llamar_outbound",
+        "slots": {},
+        "slotDetails": {},
+        "confirmationStatus": "null",
+        "nluIntentConfidenceScore": 1.0
+    },
+    "alternativeIntents": [
+        {
+            "name": "officeSchedule",
+            "slots": {
+                "location": null
+            },
+            "slotDetails": {
+                "location": null
+            },
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.6
+        },
+        {
+            "name": "AMAZON.FallbackIntent",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": null
+        },
+        {
+            "name": "welcomeMessage",
+            "slots": {},
+            "slotDetails": {},
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.54
+        },
+        {
+            "name": "creditCardBalance",
+            "slots": {
+                "pin": null
+            },
+            "slotDetails": {
+                "pin": null
+            },
+            "confirmationStatus": "null",
+            "nluIntentConfidenceScore": 0.53
+        }
+    ],
+    "inputTranscript": "Me pueden llamar",
+    "recentIntentSummaryView": null,
+    "sentimentResponse": {
+        "sentimentLabel": "NEUTRAL",
+        "sentimentScore": "{Positive: 0.2099791,Negative: 0.011106756,Neutral: 0.7735862,Mixed: 0.0053279316}"
+    },
+    "kendraResponse": null
+}
