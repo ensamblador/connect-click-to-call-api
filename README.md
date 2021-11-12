@@ -1,7 +1,8 @@
 
-# Welcome to your CDK Python project!
+# Amazon Connect Click 2 Call
 
-This is a blank project for Python development with CDK.
+![](click_to_call.jpg)
+
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -46,6 +47,28 @@ $ cdk synth
 To add additional dependencies, for example other CDK libraries, just add
 them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
+
+
+## Deploy Application on AWS
+
+Desplegar esta aplicación requiere una instancia connect y un contact flow que define la experiencia del cliente.
+
+
+
+```bash
+cdk deploy \
+     --parameters contacFlowId=<CFID> \
+     --parameters instanceId=<IID> \
+     --parameters sourcePhoneNumber=<SFN>
+```
+Donde:
+
+_**CFID**_: Id del contact Flow, esto se obtiene desde la consola de administración de connect en los detalles del contact flow.
+
+_**IID**_: Instance ID que se obtiene desde la consola de administración de connect.
+
+_**SFN**_: Número de teléfono asignado a connect (uno de ellos) 
+
 
 ## Useful commands
 
