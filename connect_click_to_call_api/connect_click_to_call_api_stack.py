@@ -7,6 +7,8 @@ from aws_cdk import (
 )
 
 from aws_cdk import core
+from spa_deploy import SPADeploy
+
 
 LAMBDA_CONFIG = dict (
     timeout=core.Duration.seconds(20),       
@@ -43,3 +45,12 @@ class ConnectClickToCallApiStack(cdk.Stack):
                                                resources=["*"]))
 
         api = api_cors_lambda(self, "call_customer","connect", "call_customer", "GET", lambda_backend)
+
+
+
+        #SPADeploy(self, 'S3ReactDeploy').create_basic_site(index_doc='index.html',
+        #                                                     website_folder='website/build')
+
+        SPADeploy(self, 'S3ReactDeploy').create_site_with_cloudfront(index_doc='index.html',
+                                                             website_folder='website/build')
+        
